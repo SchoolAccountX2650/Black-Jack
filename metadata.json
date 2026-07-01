@@ -1,0 +1,8 @@
+{
+  "name": "Blackjack Academy",
+  "description": "An AI-powered Blackjack learning app to practice basic strategy. Includes real-time Gemini AI advice and post-session analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
