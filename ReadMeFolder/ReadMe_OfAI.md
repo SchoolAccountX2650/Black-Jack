@@ -34,3 +34,11 @@ This project is an AI-powered Blackjack Academy application designed to help pla
 - `src/gameLogic.ts` contains the pure logic for card values and the simplified Basic Strategy logic.
 - `App.tsx` handles the main UI layout, state management, and API calls to the local Express server.
 - The UI strictly adheres to a single-view constraint without complex routing or navigation menus.
+
+### GitHub Pages Deployment & CI/CD
+- **GitHub Actions**: Configured via `.github/workflows/deploy.yml` for automated deployment to GitHub Pages.
+- **Vite Configuration**: `vite.config.ts` handles dynamic base routing (`process.env.GITHUB_ACTIONS ? '/Black-Jack/' : '/'`). Do NOT alter this `base` configuration.
+- **AI Studio Stability**: HMR and file-watching are strictly controlled via `DISABLE_HMR` to prevent rendering artifacts or CPU spikes during agent edits. Please maintain these settings.
+
+### Fixes & Restoration
+- Restored `index.html`, `tsconfig.json`, `src/main.tsx`, and `src/index.css` which were somehow missing and causing build errors (`Could not resolve entry module "index.html"`).
